@@ -1,0 +1,207 @@
+@import url(reset.css);
+
+@font-face {
+	font-family: 'Yekan';
+	src:	url('../fonts/Yekan.eot'); /* IE9 Compat Modes */
+	src:	url('../fonts/Yekan.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+			url('../fonts/Yekan.woff2') format('woff2'), /* Modern Browsers */
+			url('../fonts/Yekan.woff') format('woff'), /* Modern Browsers */
+			url('../fonts/Yekan.otf') format('opentype'), /* Open Type Font */	
+			url('../fonts/Yekan.ttf') format('truetype'); /* Safari, Android, iOS */
+	font-weight: normal;
+	font-style: normal;
+	text-rendering: optimizeLegibility;
+	font-display: auto;
+}
+
+/* General styles */
+body{
+    font-family: 'Yekan';
+    direction: rtl;
+}
+
+.container{
+    width: 850px;
+    margin:0 auto;
+    
+}
+
+/* Header styles */
+#header{
+    background-color:#11c3df;
+    height: 500px;
+    box-shadow: 0px 4px 2px -2px rgba(22, 91, 131, 0.99);
+}
+
+
+
+#header #header-section{
+    display: flex;
+}
+
+#header #header-section .text{
+    align-self: center;
+}
+
+#header #header-section .title{
+    font-size: 30px;
+    font-weight: bold;
+    line-height: 40px;
+}
+
+#header #header-section .description{
+    color: #363a37;
+    font-size: 15px;
+    padding: 15px 0 15px 15px;
+    width: 430px;
+    line-height: 19px;
+    text-align: justify;
+}
+
+#header #header-section img{
+    width: 450px;
+    position: relative;
+    top: 20px;
+}
+
+#header #header-section button{
+    width: 150px;
+    padding: 0 10px;
+    font-size: 20px;
+    background-color: #085f6e;
+    border-radius: 7px;
+    border: none;
+    color: white;
+    font-family: 'Yekan';
+    
+}
+
+#header #header-section button:hover{
+    cursor: pointer;
+    animation-name: btn;
+    animation-duration: 4s;
+    transform: scale(1.1) perspective(1px);
+}
+
+@keyframes btn {
+    from {background-color:#085f6e;}
+    to {background-color: #0f1566;}
+}
+
+/* Products styles */
+
+#products{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#products .product-item{
+   flex-basis: 200px;
+   border: 1px solid #c4c4c4;
+   margin-top: 25px;
+   border-radius: 5px;
+}
+
+#products .product-item .product-image img{
+    width: 100%;
+    height: 180px;
+    padding: 10px;
+    box-sizing: border-box;
+    
+}
+
+#products .product-item .title{
+    font-weight: bold;
+    font-size: 20px;
+    height: 50px;
+    padding: 8px;
+
+}
+
+#products .product-item .instock{
+    color:#11505a;
+    padding: 0 10px 10px 0;
+    font-size: 14px;
+}
+
+#products .product-item .product-data{
+    display: flex;
+    justify-content: space-between;
+    border-top: 1px solid #e4e4e4;
+    padding: 7px;
+    font-weight: bold;
+}
+
+#products .product-item .product-data .add-to-cart svg:hover{
+    cursor: pointer;
+    color: #11c3df;
+}
+
+/* Cart styles*/
+
+.cart{
+    background-color: rgb(186, 186, 192);
+    height: 320px;
+    width: 220px;
+    position: fixed;
+    left: 20px;
+    bottom: -10px;
+    border-radius: 6px;
+}
+
+.cart .cart-header{
+    background-color: #08368b;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    padding: 12px;
+    border-radius: 5px 5px 0 0;
+}
+
+.cart .cart-items{
+    height: 220px;
+    overflow-x: auto;
+   
+}
+
+.cart .cart-item{
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    padding: 10px;
+}
+
+.cart .cart-item .p-name:hover{
+    background-color: rgba(231, 22, 22,0.8);
+    cursor: pointer;
+    text-decoration:underline;
+}
+
+.cart .cart-item .p-unit .plus svg{
+    background-color: rgb(18, 243, 55);
+    color: white;
+    text-align: center;
+}
+
+.cart .cart-item .p-unit .minus svg{
+    background-color: red;
+    color: white;
+    text-align: center;
+}
+
+.cart .cart-item .p-unit svg{
+    font-size: 12px;
+}
+
+.cart .cart-item .p-unit svg:hover{
+cursor: pointer;
+}
+/* Footer styles */
+#footer p{
+    text-align: center;
+    background-color: #3b3b3b;
+    color: white;
+    margin-top: 15px;
+    padding: 20px;
+}
